@@ -3,30 +3,33 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
 import firebase from 'firebase/app';
 import * as firebaseui from 'firebaseui';
+import { defineComponent, onMounted } from 'vue';
 
-@Options({})
-export default class Login extends Vue {
-  firstname = 'Anonymous';
-
-  mounted() {
-    const auth = firebase.auth();
-    let ui = firebaseui.auth.AuthUI.getInstance();
-    if (!ui) {
-      ui = new firebaseui.auth.AuthUI(auth);
-    }
-    const uiConfig = {
-      signInOptions: [{
-        provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-        forceSameDevice: false,
-      }],
+export default defineComponent({
+  setup() {
+    const initFirebaseAuthUi = () => {
+      const auth = firebase.auth();
+      let ui = firebaseui.auth.AuthUI.getInstance();
+      if (!ui) {
+        ui = new firebaseui.auth.AuthUI(auth);
+      }
+      const uiConfig = {
+        signInOptions: [{
+          provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+          forceSameDevice: false,
+        }],
+      };
+      ui.start('#firebaseui-auth-container', uiConfig);
     };
-    ui.start('#firebaseui-auth-container', uiConfig);
-    this.firstname = 'logging in';
-  }
-}
+
+    onMounted(initFirebaseAuthUi);
+
+    return {
+    };
+  },
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

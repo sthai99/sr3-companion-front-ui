@@ -13,23 +13,23 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
 import firebase from 'firebase/app';
-import ActionTypes from '@/store/action-types';
-import Character from '@/store/models/character';
+import { computed, defineComponent } from 'vue';
+import { useStore } from 'vuex';
 
-@Options({})
-export default class Characters extends Vue {
-  get displayName(): string {
-    return `${this.$store.state.user?.displayName}`;
-  }
+export default defineComponent({
+  setup() {
+    const store = useStore();
 
-  get characters(): Array<Character> {
-    return this.$store.state.characters;
-  }
+    const signoutButtonPressed = () => {
+      firebase.auth().signOut();
+    };
 
-  signoutButtonPressed() {
-    firebase.auth().signOut();
-  }
-}
+    return {
+      displayName: computed(() => store.state.user?.displayName),
+      characters: computed(() => store.state.characters),
+      signoutButtonPressed,
+    };
+  },
+});
 </script>

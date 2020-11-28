@@ -1,31 +1,22 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/login">Login</router-link> |
-    <router-link to="/characters">Characters</router-link>
+  <div id="app">
+    <div class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Shadowrun
+          </h1>
+          <h2 class="subtitle">
+            3rd Edition
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/characters">Characters</router-link>
+    </div>
+    <router-view/>
   </div>
-  <router-view/>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
