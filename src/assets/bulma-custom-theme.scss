@@ -1,0 +1,59 @@
+@import 'palette';
+
+// Colors
+
+$primary: hsl(187, 3%, 82%);
+$info   : hsl(218, 63%, 77%);
+$success: hsl(124, 37%, 68%);
+$warning: hsl(57, 74%, 71%);
+$danger : $red;
+$light  : $white-ter;
+$dark   : $grey-darker;
+
+// General colors
+
+$scheme-main       : $black;
+$scheme-main-bis   : $black-bis;
+$scheme-main-ter   : $black-ter;
+$scheme-invert     : $white;
+$scheme-invert-bis : $white-bis;
+$scheme-invert-ter : $white-ter;
+
+$background        : $black-ter;
+
+$border            : $grey-lighter;
+$border-hover      : $grey-light;
+$border-light      : $grey-lightest;
+$border-light-hover: $grey-light;
+
+// Text colors
+
+$text       : hsl(208, 76%, 74%);
+$text-light : hsl(208, 76%, 87%);
+$text-strong: hsl(208, 76%, 48%);
+
+// Code colors
+
+$code           : $green;
+$code-background: $background;
+
+$pre            : $text;
+$pre-background : $background;
+
+// Link colors
+
+$link              : $blue;
+$link-visited      : $purple;
+
+$link-hover        : $grey-darker;
+$link-hover-border : $grey-light;
+
+$link-focus        : $grey-darker;
+$link-focus-border : $blue;
+
+$link-active       : $grey-darker;
+$link-active-border: $grey-dark;
+
+// Box
+
+$box-radius: 0px

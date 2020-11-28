@@ -5,6 +5,8 @@ import router, { ROUTE_NAME } from './router';
 import store from './store';
 import ActionTypes from './store/action-types';
 
+require('./assets/main.scss');
+
 const firebaseConfig = {
   apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
   authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
