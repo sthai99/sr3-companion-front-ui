@@ -74,7 +74,7 @@ export default defineComponent({
     return {
       name: 'Mink',
       sex: 'Male',
-      age: 24,
+      age: '24',
       race: 'Human',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit ac est nec laoreet. Suspendisse ut odio velit. Vivamus sem ex, tempus a libero convallis, pulvinar efficitur justo. Aliquam erat volutpat. Nunc commodo rutrum elit, ac cursus quam luctus sed. Nam mollis mauris ac scelerisque vestibulum. Phasellus viverra laoreet sapien, a placerat nibh blandit sit amet. Nam pulvinar malesuada elit vel fringilla. Donec fringilla sapien sit amet mi mattis, eget tempus neque euismod. Nam tempor facilisis est vel vulputate. Nam finibus elementum purus eget cursus. Sed non laoreet enim, at tempor massa. Duis consequat finibus mi, in mollis justo elementum in. Donec vulputate diam vitae vestibulum condimentum. Vestibulum tristique, enim quis accumsan mattis, est enim tempus lorem, in fermentum diam lacus quis nulla. Donec pretium elit laoreet velit bibendum hendrerit at vitae dolor.',
     };
