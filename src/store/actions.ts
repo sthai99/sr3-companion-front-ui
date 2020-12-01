@@ -1,18 +1,18 @@
+import container from '@/container';
 import firebase from 'firebase/app';
-import 'firebase/firestore';
 import { Commit } from 'vuex';
+import TYPES from '@/services/types';
+import CharacterService from '@/services/character-service';
 import ActionTypes from './action-types';
 import MutationTypes from './mutation-types';
-import CharacterConverter from '../adapters/datastore/character-converter';
+
+const characterService = container.get<CharacterService>(TYPES.CharacterService);
 
 const actions = {
   [ActionTypes.CHANGE_USER]: ({ commit }: { commit: Commit }, user: firebase.User) => {
     commit(MutationTypes.SET_USER, user);
-    const db = firebase.firestore();
-    db.collection('characters').where('author', '==', user.uid).withConverter(new CharacterConverter()).get()
-      .then((querySnapshot) => {
-        commit(MutationTypes.SET_CHARACTERS, querySnapshot.docs.map((doc) => doc.data()));
-      })
+    return characterService.findAllByUserId(user.uid)
+      .then((characters) => commit(MutationTypes.SET_CHARACTERS, characters))
       .catch((error) => {
         console.log('Error getting characters: ', error);
       });

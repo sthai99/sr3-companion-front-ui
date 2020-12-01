@@ -1,5 +1,7 @@
 import { createApp } from 'vue';
+import 'reflect-metadata';
 import firebase from 'firebase/app';
+import 'firebase/firestore';
 import App from './App.vue';
 import router, { ROUTE_NAME } from './router';
 import store from './store';

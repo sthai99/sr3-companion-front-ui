@@ -35,7 +35,7 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to, from) => {
+router.beforeEach((to) => {
   const authenticated = !!firebase.auth().currentUser;
   if (to.name === ROUTE_NAME.LOGIN) {
     if (authenticated) {
