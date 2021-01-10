@@ -1,14 +1,38 @@
+import Attributes from './attributes';
+
 class Character {
-  id: string;
+  private privateId: string;
 
-  name: string;
+  private privateName: string;
 
-  race: string;
+  private privateRace: string;
+
+  private privateAttributes?: Attributes;
 
   constructor(id: string, name: string, race: string) {
-    this.id = id;
-    this.name = name;
-    this.race = race;
+    this.privateId = id;
+    this.privateName = name;
+    this.privateRace = race;
+  }
+
+  public get id(): string {
+    return this.privateId;
+  }
+
+  public get name(): string {
+    return this.privateName;
+  }
+
+  public get race(): string {
+    return this.privateRace;
+  }
+
+  public get attributes(): Attributes {
+    return this.attributes;
+  }
+
+  public set attributes(attributes: Attributes) {
+    this.attributes = attributes;
   }
 }
 

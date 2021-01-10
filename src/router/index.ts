@@ -1,13 +1,8 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import firebase from 'firebase/app';
-import Home from '../views/Home.vue';
-import Login from '../views/Login.vue';
-
-export const ROUTE_NAME = {
-  HOME: 'Home',
-  LOGIN: 'Login',
-  CHARACTERS: 'Characters',
-};
+import Home from '@/views/Home.vue';
+import Login from '@/views/Login.vue';
+import ROUTE_NAME from './route-names';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -26,7 +21,25 @@ const routes: Array<RouteRecordRaw> = [
     // route level code-splitting
     // this generates a separate chunk (characters.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "characters" */ '../views/Characters.vue'),
+    component: () => import(/* webpackChunkName: "characters" */ '@/views/Characters.vue'),
+  },
+  {
+    path: '/references',
+    name: ROUTE_NAME.REFERENCE,
+    component: () => import(/* webpackChunkName: "references" */ '@/views/References.vue'),
+    children: [
+      {
+        path: 'attributes',
+        name: ROUTE_NAME.ATTRIBUTES,
+        component: () => import(/* webpackChunkName: "attributes" */ '@/views/Attributes.vue'),
+      },
+      {
+        path: 'skills',
+        name: ROUTE_NAME.SKILLS,
+        component: () => import(/* webpackChunkName: "skills" */ '@/views/Skills.vue'),
+      },
+    ]
+    ,
   },
 ];
 

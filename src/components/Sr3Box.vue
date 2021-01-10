@@ -2,7 +2,6 @@
   <div class="sr3-box">
     <div class="sr3-box-title">{{ title }}</div>
     <div class="box">
-      {{ value }}
       <slot></slot>
     </div>
   </div>
@@ -13,13 +12,9 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   props: {
-    value: {
-      type: String,
-      required: false,
-    },
     title: {
       type: String,
-      required: true,
+      required: false,
     },
   },
 });

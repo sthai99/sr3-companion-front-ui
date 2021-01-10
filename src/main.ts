@@ -3,7 +3,8 @@ import 'reflect-metadata';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import App from './App.vue';
-import router, { ROUTE_NAME } from './router';
+import router from './router';
+import ROUTE_NAME from './router/route-names';
 import store from './store';
 import ActionTypes from './store/action-types';
 

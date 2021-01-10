@@ -1,0 +1,148 @@
+[
+    {
+      "name": "Body",
+      "skillGroups": [
+        {
+          "skills": [{ "name": "Athletics" }]
+        },
+        {
+          "skills": [{ "name": "Diving" }]
+        }
+      ]
+    },
+    {
+      "name": "Strength",
+      "skillGroups": [
+        {
+          "skills": [{ "name": "Edged Weapons" }, { "name": "Clubs" }, { "name": "Pole Arms/Staffs" }]
+        },
+        {
+          "skills": [{ "name": "Cyber-Implant Combat" }, { "name": "Unarmed Combat" }]
+        },
+        {
+          "skills": [{ "name": "Throwing Weapons" }]
+        },
+        {
+          "skills": [{ "name": "Projectile Weapons" }]
+        },
+        {
+          "skills": [{ "name": "Heavy Weapons" }]
+        },
+        {
+          "skills": [{ "name": "Underwater Combat" }]
+        }
+      ]
+    },
+    {
+      "name": "Quickness",
+      "skillGroups": [
+        {
+          "skills": [{ "name": "Pistols" }, { "name": "Submachine Guns" }, { "name": "Rifles" }, { "name": "Assault Rifles" }, { "name": "Shotguns" }]
+        },
+        {
+          "skills": [{ "name": "Laser Weapons" }]
+        },
+        {
+          "skills": [{ "name": "Whips" }]
+        },
+        {
+          "skills": [{ "name": "Stealth" }]
+        }
+      ]
+    },
+    {
+      "name": "Intelligence",
+      "skillGroups": [
+        {
+          "skills": [{ "name": "Small Unit Tactics" }]
+        },
+        {
+          "skills": [{ "name": "Aura Reading" }]
+        },
+        {
+          "skills": [{ "name": "Demolitions" }]
+        },
+        {
+          "skills": [{ "name": "Gunnery" }, { "name": "Launch Weapons" }]
+        },
+        {
+          "skills": [{ "name": "Computer" }, { "name": "Electronics" }]
+        },        
+        {
+          "skills": [{ "name": "Biotech" }]
+        },
+        {
+          "skills": [{ "name": "Build/Repair" }]
+        },
+        {
+          "skills": [{ "name": "Knowledge Skills" }]
+        },
+        {
+          "skills": [{ "name": "Language Skills" }]
+        }
+      ]
+    },
+    {
+      "name": "Charisma",
+      "skillGroups": [
+        {
+          "skills": [{ "name": "Etiquette" }]
+        },
+        {
+          "skills": [{ "name": "Instruction" }]
+        },
+        {
+          "skills": [{ "name": "Interrogation" }, { "name": "Intimidation" }]
+        },
+        {
+          "skills": [{ "name": "Leadership" }]
+        },
+        {
+          "skills": [{ "name": "Negociation" }]
+        }
+      ]
+    },
+    {
+      "name": "Willpower",
+      "skillGroups": [
+        {
+          "skills": [{ "name": "Conjuring" }]
+        },
+        {
+          "skills": [{ "name": "Enchanting" }]
+        },        
+        {
+          "skills": [{ "name": "Sorcery" }]
+        }
+      ]
+    },
+    {
+      "name": "Reaction",
+      "skillGroups": [
+        {
+          "skills": [{ "name": "Bike" }]
+        },
+        {
+          "skills": [{ "name": "Car" }, { "name": "Tracks" }]
+        },        
+        {
+          "skills": [{ "name": "Hovercraft" }]
+        },
+        {
+          "skills": [{ "name": "Motorboat" }, { "name": "Ship" }]
+        },
+        {
+          "skills": [{ "name": "Sailboat" }]
+        },
+        {
+          "skills": [{ "name": "Winged Aircraft" }, { "name": "Rotor Aircraft" }, { "name": "Vector Thrust Aircraft" }, { "name": "Lighter-Than-Air Aircraft" }, { "name": "Semiballistic" }, { "name": "Suborbital" }]
+        },
+        {
+          "skills": [{ "name": "Submarine" }]
+        },
+        {
+          "skills": [{ "name": "Mechanical Arm Operation" }, { "name": "Walker" }]
+        }
+      ]
+    }
+]

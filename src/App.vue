@@ -14,9 +14,22 @@
     </div>
 
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/characters">Characters</router-link>
+      <router-link :to="{ name: ROUTE_NAME.HOME }">Home</router-link> |
+      <router-link :to="{ name: ROUTE_NAME.CHARACTERS }">Characters</router-link> |
+      <router-link :to="{ name: ROUTE_NAME.REFERENCE }">Reference tables</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+<script lang="ts">
+import { defineComponent } from 'vue';
+import ROUTE_NAME from './router/route-names';
+
+export default defineComponent({
+  setup() {
+    return {
+      ROUTE_NAME,
+    };
+  },
+});
+</script>
